@@ -1,0 +1,149 @@
+:root {
+  --color-primary: rgb(68, 29, 212);
+  --color-secondary: rgb(153, 153, 183);
+  --color-light: whitesmoke;
+}
+
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+  max-width: 70em;
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  padding: .55em;
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  border: none;
+}
+
+nav {
+  background-color: black;
+  color: var(--color-light);
+  padding: 10px;
+}
+
+nav h2 {
+  margin: 0;
+}
+
+main h1 {
+  border-bottom: 2px solid rgb(153, 153, 183);
+  padding: 5px;
+  color: var(--color-primary);
+}
+
+.hero-image {
+  background-image: url(https://images.unsplash.com/photo-1496060169243-453fde45943b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80);
+  /* NOTE if you are using a background image you will need content in it or force a height like we do with min-height */
+  min-height: 34vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0% 40%;
+}
+
+
+.project {
+  width: 32%;
+  max-height: 16em;
+  position: relative;
+  margin-bottom: 1em;
+}
+
+.projects {
+  flex-direction: row;
+}
+
+/* NOTE this give the projects section some mobile responsive-ness by changing the layout at a screen size of 600px or smaller */
+@media (max-width: 600px) {
+  .project {
+    width: 100%;
+  }
+
+  .projects {
+    flex-direction: column;
+  }
+
+}
+
+
+.project-wide {
+  width: 62%;
+  height: 16em;
+  position: relative;
+}
+
+.project-title {
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  padding: .5em;
+  margin: 0;
+  /* NOTE position absolute only works well when the parent element has 'position: relative' on it (see project and project-wide */
+  position: absolute;
+  top: 0px;
+  /* NOTE position absolute and top: 0 is what moves the title to be on top of the picture content */
+}
+
+form {
+  width: 50%;
+  padding: 1.25em;
+  background-color: white;
+  border: 1px solid rgb(214, 214, 221);
+  border-radius: 8px;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.454);
+}
+
+input {
+  margin: .25em;
+}
+
+/* UTILITY CLASSES */
+
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.centered {
+  justify-content: center;
+  align-items: center;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.p1 {
+  padding: 1em;
+}
+
+.p2 {
+  padding: 1.5em;
+}
+
+.img-fluid {
+  width: 100%;
+  height: 16em;
+  object-fit: cover
+}
+
+.text-light {
+  color: whitesmoke;
+}
+
+.profile-img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50em;
+}
